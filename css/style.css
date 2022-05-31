@@ -1,0 +1,120 @@
+body {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.none {
+  display: none;
+}
+
+.menuBurgerHide {
+  right: -100%;
+}
+
+.menuBurgerShow {
+  right: 0;
+}
+
+.menuBurgerHeader {
+  position: absolute;
+  width: 100%;
+  top: 7rem;
+  background-color: black;
+  font-size: 1.2rem;
+}
+
+.menuBurgerHeader li {
+  padding: 1rem;
+}
+
+.menuBurgerHeader li {
+  cursor: pointer;
+}
+
+.menuBurgerHeader li:hover a {
+  color: #dbdbdb;
+}
+
+.menuBurgerHeader li a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0;
+  transition: .50s;
+  position: absolute;
+  left: 0;
+  margin-top: 7px;
+  opacity: 0;
+}
+
+.menuBurgerHeader li:hover a::after {
+  background: linear-gradient(90deg, #ffae13 70%, transparent 0);
+  background-size: 8px 100%;
+  height: 2px;
+  width: 100%;
+  opacity: 1;
+}
+
+.menuBurgerHeader {
+  transition: .50s;
+}
+
+header {
+  background-color: black;
+  height: 125px;
+  position: relative;
+}
+
+header a {
+  color: white;
+}
+
+header span,
+header span.before,
+header span.after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 4px;
+  background-color: white;
+  position: relative;
+  transition: 0.5s;
+}
+
+header .activeMenuBurger {
+  right: 0;
+  cursor: pointer;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  height: 1.5rem;
+}
+
+header .activeMenuBurger span.after {
+  top: 6px;
+}
+
+header .activeMenuBurger span.before {
+  bottom: 6px;
+}
+
+.rotateMiddle {
+  opacity: 0;
+}
+
+.rotateBefore {
+  transform: rotateZ(45deg) translateX(45%);
+}
+
+.rotateAfter {
+  transform: rotateZ(-45deg) translateX(45%);
+}
